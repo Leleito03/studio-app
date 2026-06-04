@@ -1,16 +1,38 @@
-# React + Vite
+# Studio App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A multi-page React application built with Vite, featuring a clean and modern UI.
 
-Currently, two official plugins are available:
+## Live Demo
+[studio-5k752437n-mitchell-leleito-s-projects.vercel.app](https://studio-5k752437n-mitchell-leleito-s-projects.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Pages
+- **Home** — Hero section with CTA buttons and stats
+- **About Us** — Team cards and company values
+- **Contact Us** — Contact form with validation
 
-## React Compiler
+## Built With
+- [React 18](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Vercel](https://vercel.com/) (deployment)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run Locally
 
-## Expanding the ESLint configuration
+```bash
+git clone https://github.com/Leleito03/studio-app.git
+cd studio-app
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Key Concepts Used
+- Functional components
+- useState hook
+- Props and conditional rendering
+- Inline styles
+- Form validation
+- Component-based architecture
+
+## Author
+Mitchell Leleito — [github.com/Leleito03](https://github.com/Leleito03)
