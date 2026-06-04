@@ -3,23 +3,34 @@ import { useState } from 'react'
 export default function Navbar({ page, setPage }) {
   const [hovered, setHovered] = useState(null)
 
+  const links = [
+    { key: 'home', label: 'Home' },
+    { key: 'about', label: 'About us' },
+    { key: 'contact', label: 'Contact us' },
+  ]
+
   return (
     <nav style={styles.nav}>
-      <span style={styles.logo}>Studio</span>
+      <span
+        onClick={() => setPage('home')}
+        style={styles.logo}
+      >
+        Studio
+      </span>
       <div style={styles.links}>
-        {['about', 'contact'].map((p) => (
+        {links.map((link) => (
           <button
-            key={p}
-            onClick={() => setPage(p)}
-            onMouseEnter={() => setHovered(p)}
+            key={link.key}
+            onClick={() => setPage(link.key)}
+            onMouseEnter={() => setHovered(link.key)}
             onMouseLeave={() => setHovered(null)}
             style={{
               ...styles.btn,
-              ...(page === p ? styles.active : {}),
-              ...(hovered === p && page !== p ? styles.hovered : {}),
+              ...(page === link.key ? styles.active : {}),
+              ...(hovered === link.key && page !== link.key ? styles.hovered : {}),
             }}
           >
-            {p === 'about' ? 'About us' : 'Contact us'}
+            {link.label}
           </button>
         ))}
       </div>
@@ -44,6 +55,7 @@ const styles = {
     fontSize: 20,
     letterSpacing: '-0.5px',
     color: '#111',
+    cursor: 'pointer',
   },
   links: {
     display: 'flex',
